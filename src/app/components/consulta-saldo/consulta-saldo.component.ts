@@ -22,22 +22,4 @@ export class ConsultaSaldoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /**
-   * Calcula a classe CSS que indica se o saldo é positivo ou
-   * negativo.
-   *
-   * @param saldo Saldo para o qual a classe CSS será computada.
-   */
-  public classNamePorValor(saldo: number): (
-    'negativo' | 'positivo' | 'zero'
-  ) {
-    if (Math.abs(saldo) < 0.01) {
-      return 'zero';
-    } else if (saldo > 0) {
-      return 'positivo';
-    } else {
-      return 'negativo';
-    }
-  }
-
 }

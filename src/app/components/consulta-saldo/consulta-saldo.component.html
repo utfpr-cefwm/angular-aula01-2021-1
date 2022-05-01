@@ -9,7 +9,7 @@
     </div>
     <div>
       <b>Saldo</b>:
-      <span [className]="classNamePorValor(cliente.saldo)">
+      <span [className]="cliente.saldo | classNamePorValor">
         {{ cliente.saldo | currency:'BRL' }}
       </span>
     </div>
