@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 
 import { Cliente } from 'src/app/models/cliente';
 
@@ -9,11 +13,8 @@ import { Cliente } from 'src/app/models/cliente';
 })
 export class ConsultaSaldoComponent implements OnInit {
 
-  public cliente: Cliente = new Cliente(
-    new Date(),
-    'Maria das Couves',
-    800.00,
-  );
+  @Input()
+  public cliente!: Cliente;
 
   constructor(
   ) {
