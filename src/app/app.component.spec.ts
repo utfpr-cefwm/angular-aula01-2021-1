@@ -1,7 +1,15 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
+
+@Component({
+  selector: 'app-consulta-saldo',
+  template: '<b>Meu mock</b>',
+})
+export class ConsultaSaldoMockComponent {
+}
 
 describe('AppComponent', () => {
 
@@ -12,6 +20,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
+        ConsultaSaldoMockComponent,
       ],
     }).compileComponents();
   });
