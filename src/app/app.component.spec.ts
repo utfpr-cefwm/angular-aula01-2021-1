@@ -35,4 +35,17 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span')?.textContent).toContain('web app is running!');
   });
 
+  it('deve calcular o cumprimento correto para o horário', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    // Mock da getHours():
+    Date.prototype.getHours = () => 10;
+    expect(app.geraCumprimento()).toEqual('Bom dia');
+
+    // Mock da getHours():
+    Date.prototype.getHours = () => 15;
+    expect(app.geraCumprimento()).toEqual('Boa tarde');
+  });
+
 });
