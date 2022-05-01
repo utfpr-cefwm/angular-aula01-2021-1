@@ -1,3 +1,15 @@
-<app-consulta-saldo [cliente]="clienteSelecionado"></app-consulta-saldo>
+<button
+  *ngFor="let cliente of clientes"
+  (click)="clienteSelecionado = cliente"
+>
+  {{ cliente.nome }}
+</button>
+
+<hr />
+
+<app-consulta-saldo
+  *ngIf="clienteSelecionado"
+  [cliente]="clienteSelecionado"
+></app-consulta-saldo>
 
 <router-outlet></router-outlet>

@@ -9,10 +9,19 @@ import { Cliente } from './models/cliente';
 })
 export class AppComponent {
 
-  public clienteSelecionado: Cliente = new Cliente(
-    new Date(),
-    'Maria das Couves',
-    800.00,
-  );
+  public clienteSelecionado?: Cliente;
+
+  public clientes: Cliente[] = [
+    new Cliente(
+      new Date(),
+      'Maria das Couves',
+      800.00,
+    ),
+    new Cliente(
+      new Date(),
+      'José Francisco das Flores',
+      -500.00,
+    ),
+  ];
 
 }
